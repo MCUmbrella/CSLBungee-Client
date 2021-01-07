@@ -1,0 +1,4 @@
+name: CSLBungee-Client
+version: 1.0
+main: vip.floatationdevice.mcumbrella.cslbungee.client.CSLBC
+depend: [CatSeedLogin]
