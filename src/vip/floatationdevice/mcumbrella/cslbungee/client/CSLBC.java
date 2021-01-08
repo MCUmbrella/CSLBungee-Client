@@ -46,9 +46,9 @@ public class CSLBC extends JavaPlugin implements Listener
 				            socket.shutdownOutput();
 				            osw.close();
 				            socket.close();
-				            getLogger().info("Success");
+				            getLogger().info("Successful uploaded");
 				            break;
-						}catch(Throwable ee){if(a==5){getLogger().warning("Failed to change login state of "+e.getPlayer().getName()+": ");ee.printStackTrace();};getLogger().warning("Error sending data. Retrying("+a+"/5) ("+ee.toString()+")");continue;}
+						}catch(Throwable ee){if(a==5){getLogger().warning("Failed to change login state of "+e.getPlayer().getName()+": ");ee.printStackTrace();break;};getLogger().warning("Error sending data. Retrying("+a+"/5) ("+ee.toString()+")");continue;}
 					}
 				}
 			}.start();
