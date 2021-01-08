@@ -15,7 +15,6 @@ public class CSLBC extends JavaPlugin implements Listener
 	int port=14514;
 	public void onEnable()
 	{
-		getLogger().info("Enabling.");
 		getLogger().info("Player data will send to 127.0.0.1:14514");
 		Bukkit.getPluginManager().registerEvents(this, this);
 	}
