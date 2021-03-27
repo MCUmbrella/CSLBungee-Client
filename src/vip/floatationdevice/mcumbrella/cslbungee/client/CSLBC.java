@@ -12,7 +12,7 @@ import cc.baka9.catseedlogin.event.CatSeedPlayerRegisterEvent;
 
 public class CSLBC extends JavaPlugin implements Listener
 {
-	int port=14514;
+	public final int port=14514;
 	
 	public void upload(String name, String state)
 	{
@@ -37,13 +37,14 @@ public class CSLBC extends JavaPlugin implements Listener
 			            break;
 					}catch(Throwable ee)
 					{
-						if(a==4){
+						if(a==4)
+						{
 							getLogger().warning("Failed to change login state of "+name+": ");
 							ee.printStackTrace();
 							break;
-						};
-					getLogger().warning("Error sending data. Retrying("+(a+1)+"/5) ("+ee.toString()+")");
-					continue;
+						}
+						getLogger().warning("Error sending data. Retrying("+(a+1)+"/5) ("+ee.toString()+")");
+						continue;
 					}
 				}
 			}
